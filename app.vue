@@ -4,6 +4,10 @@
   </NuxtLayout>
 </template>
 <script lang="ts" setup>
+useHead({
+    titleTemplate: (title) => title ? `${title} | GENUARY'25` : "GENUARY'25",
+})
+
 if (import.meta.client) {
     window.addEventListener("keyup", (e) => {
         if (e.key === "Escape") {
